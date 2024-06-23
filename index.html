@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./public/css/main.css" />
+  </head>
+  <body>
+    <!--project...-->
+    <div class="wrapper">
+      <!--menu-->
+      <label for="show">
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </label>
+      <input type="radio" name="menu" id="show" />
+      <input type="radio" name="menu" id="close" />
+      <div class="menu">
+        <nav>
+          <div><a href="#">home</a></div>
+          <div><a href="#">about</a></div>
+          <div><a href="#">contact</a></div>
+          <div><a href="#">gallery</a></div>
+          <label for="close">&times;</label>
+        </nav>
+      </div>
+      <!--end menu-->
+      <!--slider-->
+      <div class="slider">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./public/images/cat-laptop.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./public/images/laptop.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <!--end slider-->
+    </div>
+    <!--end project...-->
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
